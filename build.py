@@ -30,6 +30,19 @@ CONFIG = {
     # The community email address. Create a dedicated one — not a personal
     # or institutional address. Until then this placeholder is shown.
     "CONTACT_EMAIL": "A community address is being set up — please use the form above.",
+
+    # Paste the WhatsApp group invite link here to show a join button on the
+    # join page (WhatsApp -> Group info -> Invite via link -> Copy link).
+    # Leave it empty and no button is shown.
+    "WHATSAPP_LINK": "",
+
+    # Optional logo in the footer (an institution or partner).
+    # Put the file in static/ and name it here, e.g. "psl-logo.svg".
+    # Leave LOGO_FILE empty and nothing is shown.
+    "LOGO_FILE": "",
+    "LOGO_ALT": "",
+    "LOGO_LINK": "",
+    "LOGO_CAPTION": "",
 }
 
 # Pages, in navigation order: (output file, template file, nav label, page title)
@@ -65,6 +78,36 @@ def brand_html(name):
     return "{} <span>{}</span>".format(" ".join(words[:-1]), words[-1])
 
 
+def whatsapp_card():
+    """The WhatsApp join card - rendered only once a group link is configured."""
+    link = CONFIG.get("WHATSAPP_LINK", "").strip()
+    if not link:
+        return ""
+    return (
+        '      <div class="contact-card">\n'
+        '        <h3>Already invited?</h3>\n'
+        "        <p>If we've sent you the invitation, this is the door.</p>\n"
+        '        <p style="margin-top:.9rem">'
+        '<a class="btn btn-primary" href="{}" rel="noopener">Open the WhatsApp group</a></p>\n'
+        '      </div>\n'
+    ).format(link)
+
+
+def partner_logo():
+    """Optional logo block in the footer."""
+    name = CONFIG.get("LOGO_FILE", "").strip()
+    if not name:
+        return ""
+    alt = CONFIG.get("LOGO_ALT", "") or "Logo"
+    img = '<img class="partner-logo" src="static/{}" alt="{}">'.format(name, alt)
+    link = CONFIG.get("LOGO_LINK", "").strip()
+    if link:
+        img = '<a href="{}" rel="noopener">{}</a>'.format(link, img)
+    caption = CONFIG.get("LOGO_CAPTION", "").strip()
+    cap = '<p class="logo-caption">{}</p>'.format(caption) if caption else ""
+    return '    <div class="partner">{}{}</div>\n'.format(img, cap)
+
+
 def fill(text, values):
     for key, value in values.items():
         text = text.replace("{{" + key + "}}", value)
@@ -91,6 +134,8 @@ def build():
             "YEAR": str(datetime.date.today().year),
         })
         # Fill the page body first, then drop it into the shared layout.
+        values["WHATSAPP_CARD"] = whatsapp_card()
+        values["PARTNER_LOGO"] = partner_logo()
         values["CONTENT"] = fill(body, values)
         (OUT / out_name).write_text(fill(base, values), encoding="utf-8")
         print("built docs/{}".format(out_name))
