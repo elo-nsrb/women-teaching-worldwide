@@ -24,8 +24,8 @@
     var cs = Math.cos(rot), sn = Math.sin(rot);
     var cx = size / 2, cy = size / 2, R = size * 0.43;
     var style = getComputedStyle(document.documentElement);
-    var base = (style.getPropertyValue('--globe-dot') || '#0E6A5B').trim();
-    var hot = (style.getPropertyValue('--coral') || '#E25B38').trim();
+    var base = (style.getPropertyValue('--globe-dot') || '#17528F').trim();
+    var hot = (style.getPropertyValue('--rose') || '#C8396B').trim();
     var list = [], p, x, z;
     for (i = 0; i < pts.length; i++) {
       p = pts[i];
