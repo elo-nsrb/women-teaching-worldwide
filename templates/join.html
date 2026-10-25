@@ -1,0 +1,116 @@
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Join</p>
+    <h1>Pull up a chair</h1>
+    <p class="lead" style="margin-top:1.2rem">If you teach mathematics, computer science or a related subject at university — at any career stage, anywhere in the world — leave your details and we'll email you the invitation.</p>
+
+    <!-- ============================================================
+         TO CONNECT A REAL FORM (Tally / Framaforms):
+         delete the <form> block below and paste the embed code here.
+         Until then the form below works offline: it formats the
+         answers so the visitor can copy and email them.
+         ============================================================ -->
+
+    <div class="card">
+      <form id="joinform" novalidate>
+        <div class="field-grid">
+          <div class="field">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-inst">Institution</label>
+            <input type="text" id="f-inst" name="institution" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-country">Country</label>
+            <input type="text" id="f-country" name="country" autocomplete="country-name">
+          </div>
+          <div class="field">
+            <label for="f-field">What you teach</label>
+            <select id="f-field" name="field">
+              <option value="">Choose one</option>
+              <option>Mathematics</option>
+              <option>Computer science</option>
+              <option>Machine learning / AI</option>
+              <option>Statistics / data science</option>
+              <option>Another related subject</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-stage">Career stage</label>
+            <select id="f-stage" name="stage">
+              <option value="">Choose one</option>
+              <option>PhD candidate</option>
+              <option>Postdoc</option>
+              <option>Lecturer / teaching fellow</option>
+              <option>Assistant professor</option>
+              <option>Associate professor</option>
+              <option>Full professor</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field full">
+            <fieldset>
+              <legend>What should we build next?</legend>
+              <div class="checks">
+                <label><input type="checkbox" name="platform" value="Monthly online lunch"> Monthly online lunch</label>
+                <label><input type="checkbox" name="platform" value="Shared resource library"> Shared resource library</label>
+                <label><input type="checkbox" name="platform" value="Members-only forum"> Members-only forum</label>
+                <label><input type="checkbox" name="platform" value="Mailing list"> Mailing list</label>
+                <label><input type="checkbox" name="platform" value="Keep me on email, not WhatsApp"> Keep me on email, not WhatsApp</label>
+                <label><input type="checkbox" name="platform" value="I'd like to help organise"> I'd like to help organise</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="field full">
+            <label for="f-msg">What would you like to ask, or to share? (optional)</label>
+            <textarea id="f-msg" name="message"></textarea>
+          </div>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary" id="f-submit">Join the community</button>
+          <span class="status" id="f-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <div class="fallback" id="fallback" hidden style="margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--line)">
+        <p style="font-size:.94rem;color:var(--ink-soft)">Copy your details below and send them to the address in the contact section — it reaches the same place.</p>
+        <pre id="draft" style="font-family:var(--mono);font-size:.8rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.8rem;margin:.8rem 0 0;max-height:16rem;overflow:auto"></pre>
+        <div class="form-foot" style="margin-top:.8rem">
+          <button type="button" class="btn btn-ghost" id="copy-draft">Copy my details</button>
+          <span class="status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <p class="privacy">
+        <strong>What happens to your data</strong>
+        The organisers of {{SITE_NAME}} are the only people who see what you send here. We use it for one thing: to contact you about the community and to work out how and where it should meet. We don't share it with anyone, don't pass it to a mailing tool, and don't use it for anything else. The legal basis is your consent, given by sending this form. We keep your entry until you ask us to remove it, or until the community stops. Use the contact section below to see, correct or delete what we hold about you — we'll do it, and you don't have to give a reason. You can also complain to your national data protection authority (in France, the CNIL).
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Talk to us</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Want to join?</h3>
+        <p>Use the form above. It's the fastest route — we read every one and reply with the invitation.</p>
+        <p style="margin-top:.9rem"><a class="btn btn-primary" href="#joinform">Go to the form</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Anything else</h3>
+        <p>Questions, an idea, an offer to help organise, or a request about your data — write to the community address:</p>
+        <div class="mailbox">{{CONTACT_EMAIL}}</div>
+      </div>
+    </div>
+    <p style="margin-top:1.6rem;font-size:.95rem;color:var(--ink-soft);max-width:40rem">We're two people doing this alongside full teaching loads, so a reply can take a few days. It always comes.</p>
+  </div>
+</section>

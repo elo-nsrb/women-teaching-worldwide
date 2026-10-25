@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+
+# Source material, not part of the published site
+draft.docx
+maja pic.jpeg
