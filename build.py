@@ -40,9 +40,9 @@ CONFIG = {
     # Put the file in static/ and name it here, e.g. "psl-logo.svg".
     # Leave LOGO_FILE empty and nothing is shown.
     "LOGO_FILE": "",
-    "LOGO_ALT": "",
-    "LOGO_LINK": "",
-    "LOGO_CAPTION": "",
+    "LOGO_ALT": "Université PSL",
+    "LOGO_LINK": "https://psl.eu",
+    "LOGO_CAPTION": "Started at Université PSL, Paris",
 }
 
 # Pages, in navigation order: (output file, template file, nav label, page title)
