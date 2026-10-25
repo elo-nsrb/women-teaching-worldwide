@@ -39,7 +39,7 @@ CONFIG = {
     # Optional logo in the footer (an institution or partner).
     # Put the file in static/ and name it here, e.g. "psl-logo.svg".
     # Leave LOGO_FILE empty and nothing is shown.
-    "LOGO_FILE": "",
+    "LOGO_FILE": "psl-logo.png",
     "LOGO_ALT": "Université PSL",
     "LOGO_LINK": "https://psl.eu",
     "LOGO_CAPTION": "Started at Université PSL, Paris",
