@@ -37,7 +37,7 @@ CONFIG = {
     # Google Apps Script web-app URL that files sign-ups into a Google Sheet.
     # See apps-script/Code.gs for the five-minute setup. It ends in /exec.
     # Leave it empty and the form falls back to "copy your details and email them".
-    "FORM_ENDPOINT": "",
+    "FORM_ENDPOINT": "https://script.google.com/macros/s/AKfycbwez19thc8xY91zCULMcSqHpB1nO9q7Dno1nMBrmPD67gk4NlG6Td1cM4J5cLZbkkC-/exec",
 
     "WHATSAPP_LINK": "",
 
