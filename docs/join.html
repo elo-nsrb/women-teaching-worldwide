@@ -38,7 +38,7 @@
          ============================================================ -->
 
     <div class="card">
-      <form id="joinform" novalidate>
+      <form id="joinform" novalidate data-endpoint="">
         <div class="field-grid">
           <div class="field">
             <label for="f-name">Name</label>
@@ -104,7 +104,7 @@
       </form>
 
       <div class="fallback" id="fallback" hidden style="margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid var(--line)">
-        <p style="font-size:.94rem;color:var(--ink-soft)">Copy your details below and send them to the address in the contact section — it reaches the same place.</p>
+        <p id="fallback-why" style="font-size:.94rem;color:var(--ink-soft)">Copy your details below and send them to the address in the contact section — it reaches the same place.</p>
         <pre id="draft" style="font-family:var(--mono);font-size:.8rem;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.8rem;margin:.8rem 0 0;max-height:16rem;overflow:auto"></pre>
         <div class="form-foot" style="margin-top:.8rem">
           <button type="button" class="btn btn-ghost" id="copy-draft">Copy my details</button>

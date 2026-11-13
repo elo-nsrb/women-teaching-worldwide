@@ -34,6 +34,11 @@ CONFIG = {
     # Paste the WhatsApp group invite link here to show a join button on the
     # join page (WhatsApp -> Group info -> Invite via link -> Copy link).
     # Leave it empty and no button is shown.
+    # Google Apps Script web-app URL that files sign-ups into a Google Sheet.
+    # See apps-script/Code.gs for the five-minute setup. It ends in /exec.
+    # Leave it empty and the form falls back to "copy your details and email them".
+    "FORM_ENDPOINT": "",
+
     "WHATSAPP_LINK": "",
 
     # Optional logo in the footer (an institution or partner).

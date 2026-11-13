@@ -54,6 +54,19 @@ on every page. Page text lives in `templates/`. Colours and type are the
 just below. Run `python3 build.py` after any change, then commit and push;
 GitHub Pages redeploys within a minute.
 
+## Sign-ups
+
+The join form posts to a Google Apps Script web app, which files each sign-up as
+a row in a Google Sheet in Maja and Eloise's Drive and can email a notification.
+
+The script is `apps-script/Code.gs`; its setup instructions are in the comment at
+the top. Once deployed, paste the web-app URL (it ends in `/exec`) into
+`CONFIG["FORM_ENDPOINT"]` in `build.py` and rebuild.
+
+If that URL is empty, or the request fails, the form degrades gracefully: the
+visitor's answers are formatted on screen with a copy button and the contact
+address, so nobody is turned away by a broken form.
+
 ## Contributing
 
 If you teach these subjects and want to help — with the site, the community, or
