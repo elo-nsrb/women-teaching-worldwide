@@ -29,7 +29,7 @@ CONFIG = {
 
     # The community email address. Create a dedicated one — not a personal
     # or institutional address. Until then this placeholder is shown.
-    "CONTACT_EMAIL": "A community address is being set up — please use the form above.",
+    "CONTACT_EMAIL": "maja.ivkovic@ymail.com",
 
     # Paste the WhatsApp group invite link here to show a join button on the
     # join page (WhatsApp -> Group info -> Invite via link -> Copy link).
